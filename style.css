@@ -10,3 +10,109 @@ body {
   display: flex;
   min-height: 100vh;
 }
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%; /* 80% width of the viewport */
+  max-width: 300px; /* Optional, limit max width to prevent sidebar from being too wide */
+  height: 100vh;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+/* Sidebar Header */
+.sidebar h2 {
+  color: #ecf0f1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Sidebar List */
+.sidebar ul {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 15px;
+  margin: 5px 0;
+  background-color: #34495e;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  background-color: #16a085;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 80%; /* Account for the fixed sidebar width */
+  padding: 20px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Styling for the day content */
+.day-content {
+  margin-top: 20px;
+}
+
+.day-content h2 {
+  color: #2980b9;
+}
+
+.day-content ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.day-content ul li {
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 15px;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70%; /* Adjust sidebar width on tablets */
+  }
+
+  .main-content {
+    margin-left: 70%;
+  }
+}
+
+
